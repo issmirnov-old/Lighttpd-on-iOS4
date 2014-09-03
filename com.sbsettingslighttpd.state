@@ -1,0 +1,5 @@
+#!/bin/sh
+rm -f /tmp/lighttpd.pid
+launchctl list | grep lighttpd > /tmp/lighttpd.pid
+
+#ps -ef | grep lighttpd | cut -d' ' -f5

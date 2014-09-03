@@ -1,0 +1,13 @@
+#!/bin/sh
+
+#PID=`ps -ef | grep lighttpd | cut -d' ' -f6`
+PID=`ps ax | grep lighttpd | sed -e 's/^[ \t]*//' | cut -d' ' -f1`
+
+
+echo "PID=$PID"
+kill $PID
+
+
+
+
+
